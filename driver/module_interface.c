@@ -1,7 +1,7 @@
 /****************************************************************************
 *
 *  Module Name    : module_interface.c
-*  Version        : 
+*  Version        :
 *
 *  Abstract       : RAVENNA/AES67 ALSA LKM
 *
@@ -81,7 +81,7 @@ static unsigned int nf_hook_func(void *priv, struct sk_buff *skb, const struct n
         printk(KERN_INFO "nf_hook_func first message received\n");
         hooked = 1;
     }
-    
+
     ip_header = (struct iphdr *)skb_network_header(skb);    //grab network header using accessor
     if (!ip_header)
     {

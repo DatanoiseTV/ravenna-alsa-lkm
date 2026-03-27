@@ -47,6 +47,7 @@ extern void stop_clock_timer(void);
 extern void get_clock_time(uint64_t* clock_time);
 
 extern void set_base_period(uint64_t base_period);
+extern void update_base_period(uint32_t tic_frame_size, uint32_t sample_rate);
 #if defined(__cplusplus)
 }
 #endif // defined(__cplusplus)

@@ -74,6 +74,7 @@ struct alsa_ops
     int (*get_nb_outputs)(void* ravenna_peer, uint32_t *nb_channels);
     int (*get_playout_delay)(void* ravenna_peer, snd_pcm_sframes_t *delay_in_sample);
     int (*get_capture_delay)(void* ravenna_peer, snd_pcm_sframes_t *delay_in_sample);
+    int (*set_jitter_buffer_depth)(void* ravenna_peer, uint32_t depth_in_frames); /// must not sleep (called under spinlock)
     int (*start_interrupts)(void* ravenna_peer, bool is_playback); /// starts IO
     int (*stop_interrupts)(void* ravenna_peer, bool is_playback); /// stops IO
 
